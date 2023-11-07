@@ -98,6 +98,7 @@ textarea {
 html {
   background-color: #222;
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -105,20 +106,48 @@ body {
   padding: 2em;
   font-size: 1.25em;
   height: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
-.wrapper {
+.flex-container {
   /*add display:flex and set justify-content to space-between*/
   font-weight: 700;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-flow: row wrap;
 }
 
-.div-1,
-.div-2,
-.div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
+header,
+footer {
+  color: #fff;
+  background-color: #222;
+  font-size: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin: 45px;
+}
+
+header h1 {
+  font-family: "Lora", sans-serif;
+  font-size: 3em;
+}
+
+main {
+  color: #fff;
+  background-color: #222;
+  font-size: 80px;
+  height: 250px;
+  width: 100%;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #999 2px solid;
+  padding-bottom: 25px;
+}
+
+.flex-items {
   color: #fff;
   line-height: 1.5em;
   font-size: 1.6em;
@@ -127,14 +156,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 27%;
-  padding: 45px;
-  margin: 25px;
+  width: 25%;
+  padding: 50px;
+  margin: 20px;
 }
 
-.div-2 {
+#div-2 {
   border-right: #ccc 2px solid;
   border-left: #ccc 2px solid;
+  padding-right: 75px;
+  padding-left: 75px;
+}
+
+#main {
+  font-size: 50px;
+}
+
+footer {
+  border-top: #999 2px solid;
+  width: 100%;
+}
+
+footer i {
+  padding: 30px 20px 0 0;
 }
 
 /* ==========================================================================
